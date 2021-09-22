@@ -1,0 +1,29 @@
+apiVersion: v1
+items:
+- apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
+  kind: SecretProviderClass
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"secrets-store.csi.x-k8s.io/v1alpha1","kind":"SecretProviderClass","metadata":{"annotations":{},"name":"uvindu-key-vault","namespace":"default"},"spec":{"parameters":{"keyvaultName":"uvindu-key-vault","objects":"array:\n  - |\n    objectName: ExampleSecret       # In this example, 'ExampleSecret'   \n    objectType: secret              # Object types: secret, key or cert\n","tenantId":"da76d684-740f-4d94-8717-9d5fb21dd1f9","useVMManagedIdentity":"true","userAssignedIdentityID":"953129a2-f0e0-48a4-a530-fe5250495dbe"},"provider":"azure"}}
+    creationTimestamp: "2021-09-22T08:59:07Z"
+    generation: 1
+    name: uvindu-key-vault
+    namespace: default
+    resourceVersion: "8371656"
+    selfLink: /apis/secrets-store.csi.x-k8s.io/v1alpha1/namespaces/default/secretproviderclasses/uvindu-key-vault
+    uid: 153d2847-e205-4eb6-9dae-3c6b4b71e2d9
+  spec:
+    parameters:
+      keyvaultName: uvindu-key-vault
+      objects: "array:\n  - |\n    objectName: ExampleSecret       # In this example,
+        'ExampleSecret'   \n    objectType: secret              # Object types: secret,
+        key or cert\n"
+      tenantId: da76d684-740f-4d94-8717-9d5fb21dd1f9
+      useVMManagedIdentity: "true"
+      userAssignedIdentityID: 953129a2-f0e0-48a4-a530-fe5250495dbe
+    provider: azure
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
